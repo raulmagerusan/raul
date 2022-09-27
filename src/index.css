@@ -4,12 +4,18 @@
   font-size: xx-large;
   padding: 30px;
 }
-.footer {
-  background-color: #20232a;
-  color: white;
-  margin-bottom:0%;
-}
 #logoreact {
   color: #61dafb;
   font-size: xx-large;
+}
+ 
+.row {
+  display: flex;
+  justify-content: center;
+  
+}
+
+footer {
+  color: white;
+  background-color: #20232a;
 }
