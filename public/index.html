@@ -25,10 +25,24 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React</title>
+    <script>
+    
+      function myFunction () {
+         let one = 10;
+         let two = 5;
+
+         const sumData = one + two;
+         const diffData = one - two;
+      
+      console.log('sumData', sumData, 'diffData', diffData)
+      alert('sumData', one + two, 'diffData', diffData)
+      
+    }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
-    <nav> <header class="meniu">
+    <button onclick="myFunction()">clickme </button>
+    <nav> <header class="menu">
        <logo id="logoreact"><img src="logo192.png" alt="logo" width="23">React</logo> Tutorial Blog Comunity Raul
     </header> 
     </nav>
