@@ -25,8 +25,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React</title>
-    <script>
     
+    <script>
       function myFunction () {
          let one = 10;
          let two = 5;
@@ -35,13 +35,31 @@
          const diffData = one - two;
       
       console.log('sumData', sumData, 'diffData', diffData)
-      alert('sumData', one + two, 'diffData', diffData)
-      
-    }
+      alert('alert')
+      }
+      function functionbutton1() {
+        let pretAnvelopaPirelli = 615;
+        let pretAnvelopaContinental = 718;
+        let pretAnvelopaMichelin = 875;
+        const tva = 1.19;
+        const tvaAdaugatPirelli = pretAnvelopaPirelli * tva;
+        const tvaAdaugatContinental = pretAnvelopaContinental * tva;
+        const tvaAdaugatMichelin = pretAnvelopaMichelin * tva;
+
+      console.log('Pret Pirelli TVA inclus', tvaAdaugatPirelli, 'Pret Anvelopa Continental TVA inclus', tvaAdaugatContinental, 'Pret Anvelopa Michelin TVA inclus', tvaAdaugatMichelin)
+      }
+    
+  
     </script>
+
   </head>
   <body>
-    <button onclick="myFunction()">clickme </button>
+    
+    <button onclick = "myFunction()">clickme </button>
+    <button onclick = "functionbutton1()" id = "button1">VAT add</button>
+    <button onclick = "functionbutton2()" id = "button2">Array Showing</button>
+    <button onclick = "functionbutton3()" id = "button3">button3</button>
+
     <nav> <header class="menu">
        <logo id="logoreact"><img src="logo192.png" alt="logo" width="23">React</logo> Tutorial Blog Comunity Raul
     </header> 
