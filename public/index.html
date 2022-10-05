@@ -27,42 +27,112 @@
     <title>React</title>
     
     <script>
-      function myFunction () {
-         let one = 10;
-         let two = 5;
+    //   function myFunction () {
+    //      let one = 10;
+    //      let two = 5;
 
-         const sumData = one + two;
-         const diffData = one - two;
+    //      const sumData = one + two;
+    //      const diffData = one - two;
       
-      console.log('sumData', sumData, 'diffData', diffData)
-      alert('alert')
-      }
-      function functionbutton1() {
-        let pretAnvelopaPirelli = 615;
-        let pretAnvelopaContinental = 718;
-        let pretAnvelopaMichelin = 875;
-        const tva = 1.19;
-        const tvaAdaugatPirelli = pretAnvelopaPirelli * tva;
-        const tvaAdaugatContinental = pretAnvelopaContinental * tva;
-        const tvaAdaugatMichelin = pretAnvelopaMichelin * tva;
+    //   console.log('sumData', sumData, 'diffData', diffData)
+    //   alert('alert')
+    //   }
+    //   function functionbutton1() {
+    //     let pretAnvelopaPirelli = 615;
+    //     let pretAnvelopaContinental = 718;
+    //     let pretAnvelopaMichelin = 875;
+    //     const tva = 1.19;
+    //     const tvaAdaugatPirelli = pretAnvelopaPirelli * tva;
+    //     const tvaAdaugatContinental = pretAnvelopaContinental * tva;
+    //     const tvaAdaugatMichelin = pretAnvelopaMichelin * tva;
 
-      console.log('Pret Pirelli TVA inclus', tvaAdaugatPirelli, 'Pret Anvelopa Continental TVA inclus', tvaAdaugatContinental, 'Pret Anvelopa Michelin TVA inclus', tvaAdaugatMichelin)
-      }
-    
+    //   console.log('Pret Anvelopa Pirelli TVA inclus', tvaAdaugatPirelli, 'Pret Anvelopa Continental TVA inclus', tvaAdaugatContinental, 'Pret Anvelopa Michelin TVA inclus', tvaAdaugatMichelin)
+      
+    // }
+ //   function functionbutton2() {
+ // const arrayData =
+  //[
+   
+ // {
+//     "id": 1,
+//     "name": "Leanne Graham",
+//     "username": "Bret",
+//     "email": "Sincere@april.biz",
+//     "address": {
+//       "street": "Kulas Light",
+//       "suite": "Apt. 556",
+//       "city": "Gwenborough",
+//       "zipcode": "92998-3874",
+//       "geo": {
+//         "lat": "-37.3159",
+//         "lng": "81.1496"
+//       }
+//     },
+//     "phone": "1-770-736-8031 x56442",
+//     "website": "hildegard.org",
+//     "company": {
+//       "name": "Romaguera-Crona",
+//       "catchPhrase": "Multi-layered client-server neural-net",
+//       "bs": "harness real-time e-markets"
+//   }
+// }     
+//   ]
+ // console.log(arrayData)
+ // document.getElementById("array").innerHTML = (arrayData);
+//}
+
+// function calculatePrice(price, VAT) {
+//   return price + VAT;
+// }
+// function calculateVAT(price) {
+// return price * 0.19;
+// }
+// function calculateSum(price1, price2) {
+//   return price1 + price2;
+// }
+// function myFunction() {
+//   let price1 = 100;
+//   let price2 = 200;
+
+//   const VAT1 = calculateVAT(price1);
+//   const VAT2 = calculateVAT(price2);
+
+//   const totalPrice = calculatePrice(price1,VAT1);
+
+//   const sum = calculateSum(price1,price2)
+//   console.log('sum', sum)
+
+// }
+
+function filterAge(age) {
+
+  console.log('age', age);
+  debugger;
+  if (age < 18) {
+    return alert('Minor')
+  } else if (age => 18 && age < 25) {
+    return alert('ceva')
+  } else {
+    return alert('Major')
+  }
   
-    </script>
+
+ }
+
+   </script>
 
   </head>
   <body>
     
     <button onclick = "myFunction()">clickme </button>
-    <button onclick = "functionbutton1()" id = "button1">VAT add</button>
-    <button onclick = "functionbutton2()" id = "button2">Array Showing</button>
-    <button onclick = "functionbutton3()" id = "button3">button3</button>
+    <button onclick = "functionbutton1()" id = "button1">VAT add </button>
+    <button onclick = "functionbutton2()" id = "button2">Array Showing </button>
+    <button onclick = "filterAge(20)" id = "button3">button 3</button>
 
     <nav> <header class="menu">
        <logo id="logoreact"><img src="logo192.png" alt="logo" width="23">React</logo> Tutorial Blog Comunity Raul
     </header> 
+    <p id="array"></p>
     </nav>
     <div>
       <h1>
