@@ -10,24 +10,13 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    
     <title>React</title>
   </head>
   <body>
-    <div id="root"></div>
+
     <nav> <header class="meniu">
        <logo id="logoreact"><img src="logo192.png" alt="logo" width="23">React</logo> Tutorial Blog Comunity
     </header> 
@@ -75,5 +64,79 @@ We’re also looking at having these support Suspense so you can have images, CS
       </tr>
       </table>
      </footer>
+
+<script>
+
+const products = [
+{
+id: 1,
+price: 2500.5,
+name: 'cuptor',
+quantity: 1
+},
+{
+id: 2,
+price: 1900.5,
+name: 'plita',
+quantity: 2
+},
+{
+id: 3,
+price: 700,
+name: 'hota',
+quantity: 2
+}
+];
+
+function alerts() {
+if (products.price <= 2000) {
+    alert ('ieftin')
+  } else {
+    alert('scump')}
+  }
+
+  alerts();
+
+products.splice(2, 1);
+
+
+function applyCost( product, quantity ) {
+    return product.priceWithVAT * quantity;
+}
+
+//1 - sa creem o factura cu toate elementele de mai sus - suma totala, tva pe fiecare element și tva total.
+//2- sa stergem produsul plita din lista și sa refacem suma totala și tva
+//3 - sa modificam prețul la id cu nr 1
+//4 - sa sortam dupa pret
+//5 - sa mapam array-ul și daca avem pret mai mare de 2000 sa afișăm în alert(“Scump”) altefe (“Ieftin”)
+//6 sa crem o funcție de switch dupa nume și sa afisam în alert numele produsului
+//7 sa adăugăm în lista noastră încă 2 produse și sa calculam suma totala și ava
+const newProducts = products.map(product => {
+  
+  product.priceWithVAT = product.price * 1.19;
+  product.VAT = product.price * 0.19;
+  // ppu = price per unit
+  console.log('Product name', product.name, 'Price', product.price, 'VAT', product.VAT, 'PPU', product.priceWithVAT, 'Quantity',product.quantity, 'Total', applyCost(product, product.quantity));
+  return product;
+});
+
+let invoiceTotal = 0;
+
+newProducts.forEach( (product) => {
+  invoiceTotal = invoiceTotal + applyCost(product, product.quantity);
+  // invoiceTotal = invoiceTotal + (product.priceWithVAT * product.quantity);
+  
+})
+
+console.log('Final invoice value: ', invoiceTotal);
+
+
+alerts();
+  
+  
+  
+
+</script>
+
   </body>
 </html>
