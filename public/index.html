@@ -14,6 +14,7 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
     <title>React</title>
+
   </head>
   <body>
 
@@ -67,74 +68,75 @@ We’re also looking at having these support Suspense so you can have images, CS
 
 <script>
 
-const products = [
-{
-id: 1,
-price: 2500.5,
-name: 'cuptor',
-quantity: 1
-},
-{
-id: 2,
-price: 1900.5,
-name: 'plita',
-quantity: 2
-},
-{
-id: 3,
-price: 700,
-name: 'hota',
-quantity: 2
+const products =  [
+    {
+      "id": 37,
+      "title": "ank Tops for Womens/Girls",
+      "price": 50,
+      "quantity": 2,
+      "total": 100,
+      "discountPercentage": 12.05,
+      "discountedPrice": 88
+    },
+    {
+      "id": 80,
+      "title": "Chain Pin Tassel Earrings",
+      "price": 45,
+      "quantity": 3,
+      "total": 135,
+      "discountPercentage": 17.75,
+      "discountedPrice": 111
+    },
+    {
+      "id": 68,
+      "title": "Stylish Luxury Digital Watch",
+      "price": 57,
+      "quantity": 3,
+      "total": 171,
+      "discountPercentage": 9.03,
+      "discountedPrice": 156
+    },
+    {
+      "id": 81,
+      "title": "Round Silver Frame Sun Glasses",
+      "price": 19,
+      "quantity": 1,
+      "total": 19,
+      "discountPercentage": 10.1,
+      "discountedPrice": 17
+    },
+    {
+      "id": 90,
+      "title": "Cycle Bike Glow",
+      "price": 35,
+      "quantity": 1,
+      "total": 35,
+      "discountPercentage": 11.08,
+      "discountedPrice": 31
+    }
+  ];
+
+  
+
+  const sum = products.reduce((accumulatorProduct, totalProduct) => {
+  return accumulatorProduct + totalProduct.total;
+}, 0);
+
+console.log('Total price:', sum);
+
+const totalQuantity = products.reduce((accumulatorProductQuantity, totalProductQuantity) => {
+  return accumulatorProductQuantity + totalProductQuantity.quantity;
+}, 0);
+console.log('Total quantity:', totalQuantity);
+
+for (let discount in products) {
+  discount = price - discountedPrice;
 }
-];
-
-function alerts() {
-if (products.price <= 2000) {
-    alert ('ieftin')
-  } else {
-    alert('scump')}
-  }
-
-  alerts();
-
-products.splice(2, 1);
+consol.log(discount)
 
 
-function applyCost( product, quantity ) {
-    return product.priceWithVAT * quantity;
-}
-
-//1 - sa creem o factura cu toate elementele de mai sus - suma totala, tva pe fiecare element și tva total.
-//2- sa stergem produsul plita din lista și sa refacem suma totala și tva
-//3 - sa modificam prețul la id cu nr 1
-//4 - sa sortam dupa pret
-//5 - sa mapam array-ul și daca avem pret mai mare de 2000 sa afișăm în alert(“Scump”) altefe (“Ieftin”)
-//6 sa crem o funcție de switch dupa nume și sa afisam în alert numele produsului
-//7 sa adăugăm în lista noastră încă 2 produse și sa calculam suma totala și ava
-const newProducts = products.map(product => {
-  
-  product.priceWithVAT = product.price * 1.19;
-  product.VAT = product.price * 0.19;
-  // ppu = price per unit
-  console.log('Product name', product.name, 'Price', product.price, 'VAT', product.VAT, 'PPU', product.priceWithVAT, 'Quantity',product.quantity, 'Total', applyCost(product, product.quantity));
-  return product;
-});
-
-let invoiceTotal = 0;
-
-newProducts.forEach( (product) => {
-  invoiceTotal = invoiceTotal + applyCost(product, product.quantity);
-  // invoiceTotal = invoiceTotal + (product.priceWithVAT * product.quantity);
-  
-})
-
-console.log('Final invoice value: ', invoiceTotal);
 
 
-alerts();
-  
-  
-  
 
 </script>
 
