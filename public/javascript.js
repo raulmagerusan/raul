@@ -403,7 +403,7 @@
  
 // let newUsers = users.filter(item => names.indexOf(item) === -1);
 // console.log(newUsers);
-
+//..................................................................
 // let newName = ['Vlad']
 
 // let usersConcat = newUsers.concat(newName);
@@ -468,10 +468,67 @@
 // numbers(5,10);
 //..................................................................
 
-function triangle(a,b,c){
-    if (a===b && b!==c && a!==c) {console.log('triungi echilateral')}
-    else if (a===b && b===c && c===a) {console.log('triungi isoscel')}
-    else if (a!==b && b!==c && a!==c) {console.log('triungi normal cu toate laturile diferite')}
-    return NaN;
+// function triangle(a,b,c){
+//     if (a===b && b!==c && a!==c) {console.log('triungi echilateral')}
+//     else if (a===b && b===c && c===a) {console.log('triungi isoscel')}
+//     else if (a!==b && b!==c && a!==c) {console.log('triungi normal cu toate laturile diferite')}
+//     return NaN;
+// }
+// triangle(1,2,3)
+//...................................................................................................
+// function adunare(a,b){
+// let sum = a+b;
+// console.log(sum);
+// }
+// adunare(2, 5);
+//................................................................................................
+
+// function adunare (a, b){
+//     let sum =a+b;
+//     return sum;
+//     }
+    
+//     console.log(adunare(2,5));
+//................................................................................................
+
+// const newArray = orders.map(order => {
+//     if(order.id === 3) {
+//         const newProducts = order.products.map(product => {
+//             if(product.id === 90) {
+//                 return {
+//                     ...product,
+//                     price: 600,
+//                     quantity: 45,
+//                     total:5453
+//                 }
+//             }
+//             return {...product}
+//         })
+//         return {
+//             ...order,
+//             products: newProducts
+//         }
+//     }
+//     return {...order}
+// })
+
+// console.log(newArray)
+function functionDom() {
+const elementParagraph = document.getElementById('p1');
+const elementInput = document.getElementById('textInput');
+elementParagraph.style.color = 'blue';
+const textContent = elementParagraph.textContent;
+
+elementParagraph.textContent = 'test new content'
+
+const dataInput = elementInput.value;
+//se schimba valoarea
+elementInput.value = 'New value';
+//citeste
+const valueRead = elementInput.value
+alert(valueRead)
+
+alert(dataInput)
+
+console.log('elementParagraph', elementParagraph, elementInput, textContent)
 }
-triangle(1,2,3)
