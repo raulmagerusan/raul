@@ -403,7 +403,7 @@
  
 // let newUsers = users.filter(item => names.indexOf(item) === -1);
 // console.log(newUsers);
-
+//..................................................................
 // let newName = ['Vlad']
 
 // let usersConcat = newUsers.concat(newName);
@@ -468,10 +468,211 @@
 // numbers(5,10);
 //..................................................................
 
-function triangle(a,b,c){
-    if (a===b && b!==c && a!==c) {console.log('triungi echilateral')}
-    else if (a===b && b===c && c===a) {console.log('triungi isoscel')}
-    else if (a!==b && b!==c && a!==c) {console.log('triungi normal cu toate laturile diferite')}
-    return NaN;
-}
-triangle(1,2,3)
+// function triangle(a,b,c){
+//     if (a===b && b!==c && a!==c) {console.log('triungi echilateral')}
+//     else if (a===b && b===c && c===a) {console.log('triungi isoscel')}
+//     else if (a!==b && b!==c && a!==c) {console.log('triungi normal cu toate laturile diferite')}
+//     return NaN;
+// }
+// triangle(1,2,3)
+//...................................................................................................
+// function adunare(a,b){
+// let sum = a+b;
+// console.log(sum);
+// }
+// adunare(2, 5);
+//................................................................................................
+
+// function adunare (a, b){
+//     let sum =a+b;
+//     return sum;
+//     }
+    
+//     console.log(adunare(2,5));
+//................................................................................................
+
+// const newArray = orders.map(order => {
+//     if(order.id === 3) {
+//         const newProducts = order.products.map(product => {
+//             if(product.id === 90) {
+//                 return {
+//                     ...product,
+//                     price: 600,
+//                     quantity: 45,
+//                     total:5453
+//                 }
+//             }
+//             return {...product}
+//         })
+//         return {
+//             ...order,
+//             products: newProducts
+//         }
+//     }
+//     return {...order}
+// })
+
+// console.log(newArray)
+// function functionDom() {
+// const elementParagraph = document.getElementById('p1');
+// const elementInput = document.getElementById('textInput');
+// elementParagraph.style.color = 'blue';
+// const textContent = elementParagraph.textContent;
+
+// elementParagraph.textContent = 'test new content'
+
+// const dataInput = elementInput.value;
+// //se schimba valoarea
+// elementInput.value = 'New value';
+// //citeste
+// const valueRead = elementInput.value
+// alert(valueRead)
+
+// alert(dataInput)
+
+// console.log('elementParagraph', elementParagraph, elementInput, textContent)
+// }
+
+const products =  [
+    {
+      "id": 37,
+      "title": "ank Tops for Womens/Girls",
+      "price": 50,
+      "quantity": 2,
+      "total": 100,
+      "discountPercentage": 12.05,
+      "discountedPrice": 88
+    },
+    {
+      "id": 80,
+      "title": "Chain Pin Tassel Earrings",
+      "price": 45,
+      "quantity": 3,
+      "total": 135,
+      "discountPercentage": 17.75,
+      "discountedPrice": 111
+    },
+    {
+      "id": 68,
+      "title": "Stylish Luxury Digital Watch",
+      "price": 57,
+      "quantity": 3,
+      "total": 171,
+      "discountPercentage": 9.03,
+      "discountedPrice": 156
+    },
+    {
+      "id": 81,
+      "title": "Round Silver Frame Sun Glasses",
+      "price": 19,
+      "quantity": 1,
+      "total": 19,
+      "discountPercentage": 10.1,
+      "discountedPrice": 17
+    },
+    {
+      "id": 90,
+      "title": "Cycle Bike Glow",
+      "price": 35,
+      "quantity": 1,
+      "total": 35,
+      "discountPercentage": 11.08,
+      "discountedPrice": 31
+    }
+  ];
+//.....................................................................
+//   const initialValue = 0;
+  
+// const sumWithInitial = products.reduce(
+//   (previousValue, currentValue) => previousValue + currentValue.total,
+//   initialValue
+// );
+
+// console.log(sumWithInitial);
+//........................................................................
+// const initialValue = 0;
+  
+// const sumWithInitial = products.reduce(
+//   (previousValue, currentValue) => previousValue + currentValue.quantity,
+//   initialValue
+// );
+
+// console.log(sumWithInitial);
+//.......................................................................
+
+
+//   function arrayInvoice(){
+// const difDiscount = products.map(product => 
+//     product.products = {
+//        totalDiscount: (product.price*product.quantity - product.discountedPrice),
+//         ...product
+// } 
+//     );
+//     const initialValue = 0;
+//     const sumDiscount = difDiscount.reduce(
+//         (previousValue, currentValue) => previousValue + currentValue.totalDiscount,
+//        initialValue
+//      );
+     
+// console.log(difDiscount, sumDiscount);
+//     }
+//     arrayInvoice();
+//...................................................................................
+
+  //   const result = products.filter(product => {
+  //     if (product.id !== 90) {
+  //      return true;
+  //     }
+  //   else {return false}
+  //   });
+    
+  // function arrayInvoice(){
+  //   const difDiscount = result.map(product => 
+  //       product.result = {
+  //          totalDiscount: (product.price*product.quantity - product.discountedPrice),
+  //           ...product
+  //   } 
+  //       );
+  //       const initialValue = 0;
+  //       const sumDiscount = difDiscount.reduce(
+  //           (previousValue, currentValue) => previousValue + currentValue.totalDiscount,
+  //          initialValue
+  //        );
+         
+  //   console.log(difDiscount, 'total discount', sumDiscount);
+  //       }
+  //       arrayInvoice();
+  //.................................................................................
+  
+
+//   const index = products.findIndex(object => {
+//     return object.id === 80;
+//   });
+
+//   console.log(index);
+// dataArray = products.map(product => console.log(product));
+
+//   if (product.id === index) {
+//       id: products.id,
+//       title: products.title,
+//       price: 99,
+//       quantity: 100,
+//       total: products.total,
+//       discountPercentage: products.discountPercentage,
+//       discountedPrice: discountedPrice
+//   }
+//   {
+
+//   };
+ 
+//   console.log(dataArray);
+  
+  
+
+  //........................................................................................
+  // const sortArray = products.sort((a, b) => a.quantity - b.quantity);
+  // console.log(sortArray)
+  // const sortArray = products.sort((a, b) => a.discountedPrice - b.discountedPrice);
+  // console.log(sortArray)
+  // const sortArray = products.sort((a, b) => a.total - b.total);
+  // console.log(sortArray)
